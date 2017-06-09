@@ -37,7 +37,7 @@ fun area(a: Point, b: Point, c: Point) = Math.abs((
                 + c.first * (a.second - b.second)
         ) / 2.0)
 
-private fun sides(a: Point, b: Point, c: Point) = Triple(dist(b, c), dist(a, c), dist(a, b))
+private fun sides(a: Point, b: Point, c: Point) = listOf(dist(b, c), dist(a, c), dist(a, b))
 
 fun angles(_a: Point, _b: Point, _c: Point): Array<Double> {
     val (a, b, c) = sides(_a, _b, _c)
