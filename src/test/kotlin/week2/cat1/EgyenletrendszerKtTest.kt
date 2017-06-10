@@ -2,7 +2,7 @@ package week2.cat1
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
-import util.assertEqualsSorted
+import util.assertEqualsWithDelta
 import week2.cat1.egyenletrendszer.solve
 
 class EgyenletrendszerKtTest {
@@ -14,7 +14,7 @@ class EgyenletrendszerKtTest {
                 c = 3.0, d = 1.0, q = 20.0
         )
 
-        assertEqualsSorted(listOf(6.0, 2.0), result, 0.01)
+        assertEqualsWithDelta(listOf(6.0, 2.0), result, 0.01)
     }
 
     @Test
@@ -24,7 +24,7 @@ class EgyenletrendszerKtTest {
                 c = 14.2, d = 0.1, q = 139.055
         )
 
-        assertEqualsSorted(listOf(9.61, 25.93), result, 0.01)
+        assertEqualsWithDelta(listOf(9.61, 25.93), result, 0.01)
     }
 
     @Test
