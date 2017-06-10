@@ -18,6 +18,8 @@ inline fun withStdIn(input: String, block: () -> Unit) {
     val inStream = ByteArrayInputStream(input.toByteArray())
     System.setIn(inStream)
     block()
+    while (readLine() != null) {
+    }
     System.setIn(null)
 }
 
